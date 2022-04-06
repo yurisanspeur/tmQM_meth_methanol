@@ -21,7 +21,7 @@ class OptimizeComplex(FiretaskBase):
         print("It is running this codebase!")
         run_orca = f"/opt/orca-5.0.2/orca {orca_inp_file} '--map-by hwthread' > {orca_inp_file.split('/')[-1].split('.')[0]}_sp_orca.out"
         subprocess.Popen(run_orca.split(), stdout=subprocess.PIPE)
-        output, error = process.communicate()
+        output, error = subprocess.communicate()
         return FWAction(stored_data={"output": "some energy"})
 
 

@@ -18,7 +18,6 @@ class OptimizeComplex(FiretaskBase):
 
         # Variables
         orca_inp_file = self["input_path"]
-        breakpoint()
         print("It is running this codebase!")
         run_orca = f"/opt/orca-5.0.2/orca {orca_inp_file} '--map-by hwthread' > {orca_inp_file.split('/')[-1].split('.')[0]}_sp_orca.out"
         subprocess.Popen(run_orca.split(), stdout=subprocess.PIPE)
@@ -46,5 +45,4 @@ if __name__ == "__main__":
         fws.append(fw)
     wf = Workflow(fws, name="lean_orca_func")
     launchpad.add_wf(wf)
-    breakpoint()
     print("Executing")

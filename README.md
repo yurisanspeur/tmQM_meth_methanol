@@ -18,7 +18,7 @@ Everybody is welcome to work on the tasks but we are segmenting in order to para
 
 
 # Nick TODO List
-- [ ] 6. Define the model type (GP, GNN?) architecture and target type (delta Oxo/ delta HAT)
+- [ ] 6. Define the model type (GP, GNN, multi-fidelity?) architecture and target type (delta Oxo/ delta HAT)
 - [ ] 7. For the 18k candidates, we need a script that figures out the correct multiplicity and charge to apply to the ORCA input files
 - [ ] 8. Script to figure out which of the halogen atoms is most likely to be popped out in the case that there are more than one (Use low level theory like xTB to corroborate). This should be used in 2.
 

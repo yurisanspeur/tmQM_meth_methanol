@@ -1,7 +1,7 @@
 import shutil
 
 # read file
-file1 = open('./individual_xyz_data/halides.txt', 'r')
+file1 = open('./halides.txt', 'r')
 Lines = file1.readlines()
 
 # count = 0

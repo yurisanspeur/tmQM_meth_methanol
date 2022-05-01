@@ -5924,7 +5924,7 @@ Unnamed: 0,CSD_code,q,charge,S,mult,MND,nn,oxo_charge,oxo_mult
 5922,BOXLAC,q,0,S,0,MND,5,,
 5923,BOXMAD,q,0,S,0,MND,4,,
 5924,BOXMEH,q,1,S,0,MND,4,,
-5925,BOXMIL,q,0,S,0,MND,4,,
+5925,BOXMIL,q,0,S,0,MND,4,-1.0,1.0
 5926,BOXPAG,q,0,S,0,MND,4,,
 5927,BOXPEJ,q,0,S,0,MND,6,,
 5928,BOXPEK,q,0,S,0,MND,4,,
@@ -9336,7 +9336,7 @@ Unnamed: 0,CSD_code,q,charge,S,mult,MND,nn,oxo_charge,oxo_mult
 9334,COQWEN,q,0,S,0,MND,4,,
 9335,COQWOW,q,0,S,0,MND,4,,
 9336,COQWOX,q,0,S,0,MND,4,,
-9337,COQXEN,q,0,S,0,MND,4,,
+9337,COQXEN,q,0,S,0,MND,4,-1.0,3.0
 9338,COQXIR,q,0,S,0,MND,4,,
 9339,CORBER,q,0,S,0,MND,8,,
 9340,CORBIV,q,0,S,0,MND,8,,
@@ -35698,7 +35698,7 @@ Unnamed: 0,CSD_code,q,charge,S,mult,MND,nn,oxo_charge,oxo_mult
 35696,KUGVAJ,q,1,S,0,MND,6,,
 35697,KUGVAL,q,0,S,0,MND,2,,
 35698,KUGVEO,q,0,S,0,MND,3,,
-35699,KUGVIS,q,0,S,0,MND,3,,
+35699,KUGVIS,q,0,S,0,MND,3,-1.0,3.0
 35700,KUGWIT,q,0,S,0,MND,3,,
 35701,KUGWUF,q,0,S,0,MND,3,,
 35702,KUGXAM,q,0,S,0,MND,4,,
@@ -40605,7 +40605,7 @@ Unnamed: 0,CSD_code,q,charge,S,mult,MND,nn,oxo_charge,oxo_mult
 40603,MEBMEN,q,0,S,0,MND,9,,
 40604,MEBMUC,q,0,S,0,MND,4,,
 40605,MEBNEM,q,0,S,0,MND,4,,
-40606,MEBNIS,q,0,S,0,MND,2,,
+40606,MEBNIS,q,0,S,0,MND,2,-1.0,1.0
 40607,MEBPOY,q,0,S,0,MND,6,,
 40608,MEBSIW,q,0,S,0,MND,6,,
 40609,MEBSUI,q,0,S,0,MND,9,,
@@ -41722,7 +41722,7 @@ Unnamed: 0,CSD_code,q,charge,S,mult,MND,nn,oxo_charge,oxo_mult
 41720,MINYOZ,q,0,S,0,MND,2,,
 41721,MINZEO,q,1,S,0,MND,6,,
 41722,MIPBAO,q,1,S,0,MND,3,,
-41723,MIPBAQ,q,0,S,0,MND,4,,
+41723,MIPBAQ,q,0,S,0,MND,4,-1.0,3.0
 41724,MIPBEU,q,0,S,0,MND,4,,
 41725,MIPCAR,q,0,S,0,MND,4,,
 41726,MIPCEV,q,1,S,0,MND,4,,

@@ -13,7 +13,7 @@ import pickle
 
 
 '''data load'''
-with open('./data/autocorrelation.pkl', 'rb') as f:
+with open('./data/autocorrelation_oxo_intermed.pkl', 'rb') as f:
      fp = pickle.load(f)
 df_full = pd.DataFrame(fp).T
 df = df_full.dropna()   

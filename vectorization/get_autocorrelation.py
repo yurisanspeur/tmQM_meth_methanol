@@ -62,7 +62,8 @@ if __name__ == "__main__":
     
     rac_results = {}
     for code in tqdm(code_list):
-        file = repo_path+'/filtered_xyz_data/'+code+".xyz"
+        files = os.listdir(repo_path+"/individual_xyz_data/oxo_intermediates") 
+        #file = repo_path+'/filtered_xyz_data/'+code+".xyz"
         try:
             rac = make_rac(xyz_file=file, m_depth=m, l_depth=l, is_oct=True)
         except:
@@ -71,7 +72,7 @@ if __name__ == "__main__":
         
 
     #'./data/autocorrelation_m'+str(m)+'_l'+str(l)+'.pkl'
-    with open('./data/autocorrelation.pkl', 'wb') as f:
+    with open('./data/autocorrelation_oxo_intermed.pkl', 'wb') as f:
          pickle.dump(rac_results, f)
     
     

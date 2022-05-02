@@ -17,7 +17,7 @@ repo_path = os.getcwd()
 os.chdir(current_path)
 
 '''load data'''
-with open('./data/autocorrelation_m4_l1.pkl', 'rb') as f:
+with open('./data/autocorrelation_oxo_intermed.pkl', 'rb') as f:
      fp = pickle.load(f)
 df_full = pd.DataFrame(fp).T
 df = df_full.dropna()
@@ -68,7 +68,7 @@ for i in np.arange(cluster_number):
         pickle.dump(xyz_file, f)
     
     '''copy candidate xyz files'''
-    src_path = repo_path+"/filtered_xyz_data/"
+    src_path = repo_path+"/individual_xyz_data/"
     dst_path = repo_path+"/subset_xyz_rac/"
     for file in xyz_file:
         shutil.copy(src_path+file, dst_path)

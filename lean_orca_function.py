@@ -25,10 +25,14 @@ class OptimizeComplex(FiretaskBase):
 
 
 if __name__ == "__main__":
-    inputs = [
-        "/home/jovyan/shared_scratch/individual_xyz_data/inputs/LEKRID.xyz.inp",
-        "/home/jovyan/shared_scratch/individual_xyz_data/inputs/OXACUN.xyz.inp",
-    ]
+    #inputs = [
+    #    "/home/jovyan/shared_scratch/individual_xyz_data/inputs/LEKRID.xyz.inp",
+    #    "/home/jovyan/shared_scratch/individual_xyz_data/inputs/OXACUN.xyz.inp",
+    #]
+#    inputs = ["/home/jovyan/oxo_intermediates/inputs/ERAPUI.xyz.inp",
+#            "/home/jovyan/oxo_intermediates/inputs/FEKGUA.xyz.inp"
+#            ]
+    molecules = open('oxo_int_charge_mult_success.txt','r').readlines()
     launchpad = LaunchPad(
         host="localhost",
         name="fw_oal",
@@ -37,7 +41,9 @@ if __name__ == "__main__":
         password="gfde223223222rft3",
     )
     fws = []
-    for input_ in inputs:
+    for mol in molecules[:900]:
+        mol_name = mol.split('\n')[0]
+        input_ = f"/home/jovyan/oxo_intermediates/inputs/{mol_name}.xyz_charge_mult.inp"
         fw = Firework(
             OptimizeComplex(input_path=f"{input_}"), name=f"lean_orca_FW_{input_}"
         )

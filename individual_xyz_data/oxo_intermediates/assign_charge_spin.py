@@ -26,7 +26,7 @@ for mol in tqdm(molecules):
         mol = Molecule.from_file(f"{mol_name}.xyz_oxo_intermediate.xyz")
 
         mol_comp = mol.composition
-        target_charge = orig_charge + 1 # because of the halide (resting state oxidation state)
+        target_charge = orig_charge # Assume the total charge is the same as the original charge
         #target_charge = orig_charge# in case of oxo
 
         mol_comp_ox = mol_comp.add_charges_from_oxi_state_guesses(target_charge=target_charge) # The oxidation states are determined from the resting state and then changed based on the
@@ -35,7 +35,7 @@ for mol in tqdm(molecules):
         metal_center = [el for el in mol_comp_ox.elements if el.is_metal][0]
 
         # If it is oxo, then we increase the oxidation state by two
-        metal_center._oxi_state += 2 #FIXME: Is this correct?
+        #metal_center._oxi_state += 2 #FIXME: Is this correct?
 
         # Get the spin from the coordination (take from MND), the oxidation state and the location in the periodic table
         if metal_center.row >= 5:
@@ -51,7 +51,7 @@ for mol in tqdm(molecules):
         spin = metal_center.get_crystal_field_spin(coordination=coordination, spin_config=spin_config)
         print(f"Spin for {mol_name} is: {spin+1}")
         # Place charge and mult in df in order to create the orca input files
-        df.loc[df['CSD_code'] == mol_name,'oxo_charge'] = int(orig_charge + 1 - 2)
+        df.loc[df['CSD_code'] == mol_name,'oxo_charge'] = int(orig_charge)
         df.loc[df['CSD_code'] == mol_name,'oxo_mult'] = int(spin + 1)
         df.to_csv('charge_mult_oxo.csv', index=False)
     except AttributeError as e:

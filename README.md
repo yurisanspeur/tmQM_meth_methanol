@@ -18,9 +18,9 @@ Everybody is welcome to work on the tasks but we are segmenting in order to para
 
 
 # Nick TODO List
-- [ ] 6. Define the model type (GP, GNN, multi-fidelity?) architecture and target type (delta Oxo/ delta HAT) (We can show the workflow on the original tmQM dataset with their calculated properties if finding the right charge and multiplicity is proving to be a bottleneck)
+- [x] 6. Define the model type (GP, GNN, multi-fidelity?) architecture and target type (delta Oxo/ delta HAT) (We can show the workflow on the original tmQM dataset with their calculated properties if finding the right charge and multiplicity is proving to be a bottleneck)
 - [x] 7. For the 18k candidates, we need a script that figures out the correct multiplicity and charge to apply to the ORCA input files (Seems like there is not much difference)
-- [ ] 8. Script to figure out which of the halogen atoms is most likely to be popped out in the case that there are more than one (Use low level theory like xTB to corroborate). This should be used in 2. (WIP: We have a script that uses Pymatgen to figure out the oxidation state of the metal center and together with the coordination (MND) and the spin_configuration ('LS', 'MS', 'HS'), is able to return the number of unpaired electrons in the metal center, which gets used to calculate spin. Molsimplify NN can help validate (Fe(II), Fe(III))
+- [x] 8. Script to figure out which of the halogen atoms is most likely to be popped out in the case that there are more than one (Use low level theory like xTB to corroborate). This should be used in 2. (WIP: We have a script that uses Pymatgen to figure out the oxidation state of the metal center and together with the coordination (MND) and the spin_configuration ('LS', 'MS', 'HS'), is able to return the number of unpaired electrons in the metal center, which gets used to calculate spin. Molsimplify NN can help validate (Fe(II), Fe(III))
 
 
 

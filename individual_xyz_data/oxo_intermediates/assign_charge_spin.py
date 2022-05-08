@@ -53,6 +53,7 @@ for mol in tqdm(molecules):
         # Place charge and mult in df in order to create the orca input files
         df.loc[df['CSD_code'] == mol_name,'oxo_charge'] = int(orig_charge)
         df.loc[df['CSD_code'] == mol_name,'oxo_mult'] = int(spin + 1)
+        df.loc[df['CSD_code'] == mol_name,'oxo_formal_oxidation_state'] = int(metal_center._oxi_state) # Will use this to infer for the rest of the intermediates
         df.to_csv('charge_mult_oxo.csv', index=False)
     except AttributeError as e:
         print(f"Could not calculate spin for {mol_name}. Failed with exception {e}!")
